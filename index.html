@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT</title>
+    <style>
+         
+        #img1{width: 500px;}
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 0.875em 1.85em;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:700px) {
+            li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 0.875em 0.3125em;
+            text-decoration: none;
+            font-size: 0.75em;
+        }
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .heading{
+            font-weight:bold;
+            font-size: large;
+        }
+
+        @media screen and (max-width:700px) {
+            .heading{
+            font-weight:bold;
+            font-size: 1em;
+        }
+        }
+
+        .hapebeast{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        #myVideo{
+            width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       
+        .grid { 
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1.25em;
+            align-items: center;
+        }
+
+        @media only screen and (max-width: 900px) and (min-width: 700px){
+            .grid { 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1.25em;
+            align-items: center;
+        }
+        }
+
+        @media screen and (max-width:700px) {
+            .grid { 
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 1.25em;
+            align-items: center;
+        }
+        
+        }
+           
+        .grid > article {
+        border: 1px solid #ccc;
+        border-radius: 1.25em;
+        box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+        transform: perspective(1500px) rotateY(10deg);
+        transition: transform 1s ease 0s;
+        }
+        .grid > article:hover {
+        transform: perspective(3000px) rotateY(5deg);
+        }
+    
+        
+        .grid > article img {
+        max-width: 50%;
+        border-radius: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.25em;
+        }
+     
+
+        .text {
+        padding: 0 1.25em 1.25em;
+        text-align: center;
+        font-weight: bolder;
+        }
+
+        .text > button {
+        background: black;
+        border: 0;
+        color: white;
+        padding: 0.625em;
+        width: 100%;
+        font-weight: bolder;
+        opacity: 0.6;
+        transition: 0.3s;
+        cursor: pointer;
+        }
+
+        .text > button:hover{
+            opacity: 1;
+        }
+
+        .artistheading{
+            text-align: center;
+            font-size: 3.125em;
+            color: floralwhite;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            margin-bottom: 0.5em;
+            margin-top: 0.5em;
+            background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+        }
+
+        @media screen and (max-width:700px) {
+            .artistheading{
+            font-weight:bold;
+            font-size: 1.85em;
+        }
+        }
+
+        .container {
+        position: relative;
+        margin-top: 1.85em;
+ 
+        }
+        .container .btn a{
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: black;
+        color: white;
+        font-size: 1em;
+        padding: 0.75em 1.5em;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 0.3125em;
+        text-align: center;
+        opacity: 0.8;
+        transition: 0.3s;
+        text-decoration: none;
+        }
+
+
+        .btn{
+            border: none;
+            outline: none;
+        }
+
+        
+
+
+        .container .btn:hover a{
+            opacity: 1.5;
+            background-color: rgb(255, 124, 0)
+        }
+
+        .fotter{
+            text-align: center;
+        }
+
+        .button{
+            background: black;
+        border: 0;
+        color: white;
+        padding: 0.625em;
+        font-weight: bolder;
+        cursor: pointer;
+        }
+
+        .button:hover{
+            opacity: 1.5;
+            background-color: rgb(255, 124, 0)
+        }
+
+
+        
+
+
+    </style>
+</head>
+<body>
+    <section class="navbar">
+        <div>
+            <ul>
+                <li style="float:left" class="heading"><a class="active" href="#home">HAPEBEAST</a></li>
+                <li><a href="https://opensea.io/collection/hapeprime">MINT NOW</a></li>
+                <li><a href="https://twitter.com/HAPEsocial">TWITTER</a></li>
+                <li><a href="#artist">ARTISTS</a></li>
+                
+            </ul>
+        </div>
+    </section>
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+    </div>
+   <div id="artist" class="artistheading">
+    ARTISTS
+   </div>
+    <main  class="grid">
+        <article>
+            <img src="https://preview.redd.it/97gplst0e2z71.jpg?auto=webp&s=c8702ad171f12e18cce17274f791e9c5c2cec261" alt="Sample photo">
+            <div class="text">
+                <h3>TROU</h3>
+                <p>UTILITY</p>
+                <button>CONNECT</button>
+            </div>
+        </article>
+        <article>
+            <img src="https://miro.medium.com/max/746/1*bEHFxsoI5uOZ3at03gv1nw.png" alt="Sample photo">
+            <div class="text">
+                <h3>SIDDARTH</h3>
+                <p>LEAD DEVELOPER</p>
+                <button>CONENCT</button>
+            </div>
+        </article>
+        <article>
+            <img src="https://www.nftculture.com/wp-content/uploads/2022/01/FJajYjXWUAUGp7F-300x300.jpg" alt="Sample photo">
+            <div class="text">
+                <h3>SAM</h3>
+                <p>MARKETING HEAD</p>
+                <button>CONNECT</button>
+            </div>
+        </article>
+    </main>
+    <div class="container">
+        <img class="hapebeast" alt="Hapebeast" src="https://s3-ap-southeast-2.amazonaws.com/techau-images/wp-media-folder-techau/wp-content/uploads/2022/01/Hapebeast.png"/>
+        <button class="btn"><a href="https://opensea.io/collection/hapeprime">MINT NOW</a></button>
+    </div>
+    <section class="fotter">
+        <div>
+        <h1 class="footerheading">ARE YOU A HAPE FAN </h1>
+        </div>
+        <div>
+            <button class="button" type="button" onclick="count()">HELL YEAH !!!</button>
+            <button class="button">NOPE</button>
+        </div>
+        <h1>CLUB MEMBERS: <a id="clicks">0</a></h1>
+    </section>
+    
+</body>
+<script>
+    var clicks = 0;
+    function count(){
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+   }
+
+   window.onload = function () {
+    var element = document.getElementById('myVideo');
+    element.autoplay = "autoplay";
+    element.loop = "loop"
+}
+</script>
+</html>
